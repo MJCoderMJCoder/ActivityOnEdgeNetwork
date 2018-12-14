@@ -253,7 +253,7 @@
 							}
 						}
 					}
-					out.print("<td align=\"center\">最早完成时间：" + duration + "分钟</td>");
+					out.print("<td align=\"center\">最早完成时间：" + duration + "周</td>");
 					((Project) session.getAttribute("project")).setEarliestFinishTime(duration);
 					out.print("</tr>");
 				}
@@ -280,7 +280,7 @@
 						duration += criticalAoes.get(i).getDuration();
 					}
 				}
-				out.print("<td align=\"center\">最早完成时间：" + duration + "分钟</td>");
+				out.print("<td align=\"center\">最早完成时间：" + duration + "周</td>");
 				((Project) session.getAttribute("project")).setEarliestFinishTime(duration);
 				out.print("</tr>");
 			}

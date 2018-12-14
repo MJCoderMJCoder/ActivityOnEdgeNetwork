@@ -52,7 +52,7 @@
 				} else if (projects.get(i).getPriority() == 3) {
 					out.print("	<td align=\"center\">高</td>");
 				}
-				out.print("	<td align=\"center\">" + projects.get(i).getEarliestFinishTime() + "分钟</td>");
+				out.print("	<td align=\"center\">" + projects.get(i).getEarliestFinishTime() + "周</td>");
 				out.print("	<td id=\"progress" + i + "\" align=\"center\">"
 						+ progress[i] / projects.get(i).getEarliestFinishTime() * 100 + " %</td>");
 				out.print("	</tr>");
@@ -71,7 +71,7 @@
 				if (progress[i] >= projects.get(i).getEarliestFinishTime()) {
 					if (i >= projects.size() - 1) {
 						out.print("<tr><td align=\"center\" colspan=\"4\"><br/><br/><br/>项目已在最短最合理的排序情况下运行完毕<br/>共耗时："
-								+ totalTime + "分钟</td></tr>");
+								+ totalTime + "周</td></tr>");
 					}
 				} else {
 					break;
